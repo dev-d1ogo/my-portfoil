@@ -1,0 +1,176 @@
+.hero-container::after,
+.hero-container::before
+{
+    content: " ";
+    width: 28.125rem;
+    height: 28.125rem;
+    border-radius: 28.125rem;
+    background: #7c66e3;
+    position: absolute;
+    z-index: -1;
+    filter: blur(255px);
+}
+
+.hero-container::after{
+    top: -3rem;
+    left: -5rem;
+}
+
+.hero-container::before{
+    top: 2rem;
+    right: 0rem;
+}
+
+.hero-content h2{
+    line-height: 5rem;
+}
+.hero-content p{
+    line-height: 2rem;
+}
+.hero-content{
+    flex: 1;
+}
+
+.hero-image{
+    flex: 1;
+    
+}
+
+.hero-image{
+    width: 200px;
+}
+
+.hero-image > div {
+    display: flex;
+    align-items: center;
+    transition: all 0.3  ease;
+    gap: 1.5rem;
+}
+
+.hero-image > div > img{
+    width: 2rem !important;
+    transition: all 0.5  ease;
+}
+
+.tech-icon{
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.65rem;
+    border: 1.5px solid #6852ba;
+}
+
+.tech-icon img{
+    width: 3rem;
+    height: auto;
+    transition: all 0.3  ease;
+}
+
+.hero-image > div > img:hover,
+.tech-icon img:hover{
+    transform: translateY(-0.5rem);
+}
+
+
+// Responsividade
+
+@media (max-width: 1025px){
+    .hero-content h2{
+        font-size: 3rem;
+        line-height: 1rem !important; 
+        text-align: center;
+    }
+
+    .hero-content p{
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+
+    .hero-image > div > img{
+        width: 20rem;
+    }
+
+    .tech-icon{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .tech-icon img{
+        width: 2.5rem;
+    }
+}
+
+@media (max-width: 1024px){
+
+    .hero-container{
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .hero-image{
+        margin: 2rem 0 2rem 0;
+        width: 100%;
+    }
+
+
+    .hero-image > img{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .hero-container h2{
+        margin-top: 3rem;
+    }
+
+    .hero-content h2,
+    .hero-content p{
+        width: auto;
+        text-align: center;
+    }
+
+    .hero-container::after,
+    .hero-container::before
+    {
+        content: " ";
+        width: 18rem;
+        height: 18rem;
+        
+    }
+
+    .hero-container::after{
+        top: 0;
+        left: 0;
+    }
+    .hero-container::before{
+        bottom: 2rem;
+        right: 0;
+    }
+    
+}
+
+@media (max-width: 600px){
+    .hero-content h2{
+        font-size: 2.0rem;
+        line-height: 3rem;
+    }
+
+    .hero-content p{
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .hero-image{
+        gap: 1rem;
+    }
+
+    .hero-image > div {
+        gap: 1rem;
+    }
+
+    .tech-icon img{
+        width: 2.5rem;
+    }
+}

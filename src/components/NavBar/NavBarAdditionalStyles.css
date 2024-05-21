@@ -1,0 +1,53 @@
+
+.menu-item::before{
+	content: " ";
+	width: 2rem;
+    height: 0.2rem;
+    background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: -0.6rem;
+    opacity: 0;
+    transform: translateX(-1.5rem);
+    transition: all 0.3s;
+
+}
+
+.menu-item:hover::before{
+    width: 100%;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.btn{
+    border: none;
+    outline: 1.5px solid transparent;
+    transition: all 0.3 ease;
+}
+
+.btn:hover{
+    outline: 1.5px solid #a993fe;
+    color: #a993fe;
+    background: #000;
+    transition: all 0.3 ease;
+}
+
+.btn-menu{
+    width: 3.5rem;
+    height: 2.5rem;
+  
+    border: none;
+    border-radius: 0.4rem;
+    color: #fff ;
+    background: linear-gradient(90deg, #a993fe -0.13%, #7e61e7 99.87%);
+    line-height: 0;
+    transition: all 0.3 ease;
+    display: none;
+}
+
+.btn-menu:hover{
+    color: #a993fe;
+    background: #000;
+    border: 1px solid #a993fe;
+    transition: all 0.3 ease;
+}
