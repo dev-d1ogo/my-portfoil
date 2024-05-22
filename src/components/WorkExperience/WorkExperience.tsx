@@ -46,7 +46,7 @@ export const WorkExperience = () => {
 			<h5 className="font-semibold text-3xl mt-10">Experiências</h5>
 
 			<div className="experience-content">
-				<Slider {...settings}>
+				<Slider ref={slideRef} {...settings}>
 					{WORK_EXPERIENCE.map((item) => {
 						return (
 							<ExperienceCard key={item.title} details={item} />
